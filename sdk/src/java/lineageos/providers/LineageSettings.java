@@ -3127,6 +3127,17 @@ public final class LineageSettings {
 
         public static final Validator TETHERING_ALLOW_VPN_UPSTREAMS_VALIDATOR = sBooleanValidator;
 
+        /**
+         * Height of the back gesture
+         * 0 means full height
+         * 1 means half of the screen
+         * 2 means lower third of the screen
+         * 3 means lower sixth of the screen
+         */
+        public static final String BACK_GESTURE_HEIGHT = "back_gesture_height";
+
+        private static final Validator BACK_GESTURE_HEIGHT_VALIDATOR = ANY_INTEGER_VALIDATOR;
+
         // endregion
 
         /**
@@ -3241,6 +3252,7 @@ public final class LineageSettings {
             VALIDATORS.put(TRUST_RESTRICT_USB_KEYGUARD, TRUST_RESTRICT_USB_KEYGUARD_VALIDATOR);
             VALIDATORS.put(TRUST_WARNINGS, TRUST_WARNINGS_VALIDATOR);
             VALIDATORS.put(VOLUME_PANEL_ON_LEFT, VOLUME_PANEL_ON_LEFT_VALIDATOR);
+            VALIDATORS.put(BACK_GESTURE_HEIGHT, BACK_GESTURE_HEIGHT_VALIDATOR);
         }
     }
 
